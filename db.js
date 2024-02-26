@@ -7,4 +7,4 @@ const connecttomongo = async() =>{
     mongoose.connect(dbUrl,{useNewUrlParser: true,useUnifiedTopology:true});
 }
 
-module.exports = connecttomongo;
+module.exports = connecttomongo;;

@@ -10,19 +10,17 @@ const mongoose=require('mongoose');
 //     })
 
 
-let LoginSchema = new mongoose.Schema({
-    email:{
-        type:String,
-        required: true
+let TodoSchema = new mongoose.Schema({
+    user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'login'
     },
-    username:{
+    Todo:{
         type:String,
-        required:true
+        required: true,
+        
     },
-    password:{
-        type:String,
-        required:true
-    }  
+    
 })
 
-module.exports=mongoose.model('login',LoginSchema);;
+module.exports=mongoose.model('TodoSchema',TodoSchema);
